@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>自己紹介カード生成</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="root-container">
+            <div class="main-container">
+                <h1 class="title-header">競プロer自己紹介カード</h1>
+
+                <div class="info-container">
+                    <span style="grid-row:1;grid-column:1;" class="label-text">名前</span>
+                    <input type="text" id="name-input" style="grid-row:1;grid-column:2;" class="info-text-input">
+
+                    <span style="grid-row:2;grid-column:1;" class="label-text">好きな言語</span>
+                    <input type="text" id="preflang-input" style="grid-row:2;grid-column:2;" class="info-text-input">
+
+                    <span style="grid-row:3;grid-column:1;" class="label-text">性別</span>
+                    <select style="grid-row:3;grid-column:2;" id="gender-input" class="info-dropdown">
+                        <option>気にしない</option>
+                        <option>男</option>
+                        <option>女</option>
+                        <option>その他</option>
+                    </select>
+
+                    <span style="grid-row:4;grid-column:1;" class="label-text">競プロ歴</span>
+                    <input type="text" id="exp-input" style="grid-row:4;grid-column:2;" class="info-text-input">
+
+                    <span style="grid-row:5;grid-column:1;" class="label-text">レーティング/色</span>
+                    <div style="grid-row:5;grid-column:2;" class="rating-container">
+                        <label class="label-text">AtCoder</label>
+                        <input type="text" id="rating-atcoder-input" class="info-text-input">
+                    </div>
+
+                    <div style="grid-row:6;grid-column:2;" class="rating-container">
+                        <label class="label-text">Codeforces</label>
+                        <input type="text" id="rating-codeforces-input" class="info-text-input">
+                    </div>
+
+                    <div style="grid-row:7;grid-column:2;" class="rating-container">
+                        <label class="label-text">その他</label>
+                        <textarea id="rating-other-input" class="info-text-input"></textarea>
+                    </div>
+
+                    <span style="grid-row:8;grid-column:1;" class="label-text">推し♡アルゴリズム</span>
+                    <textarea style="grid-row:8;grid-column:2;" id="best-algo-input" class="info-text-input"></textarea>
+
+                    <span style="grid-row:9;grid-column:1;" class="label-text">コメント</span>
+                    <textarea style="grid-row:9;grid-column:2;" id="comment-input" class="info-text-input"></textarea>
+
+                </div>
+
+                <div class="generate-button-container">
+                    <button role="button" class="user-button" id="generate-button">生成</button>
+                </div>
+                
+                <div id="preview-container">
+                    <h1 class="preview-header">プレビュー</h1>
+
+                    <img id="preview-image">
+
+                    <div class="generate-button-container">
+                        <button role="button" class="user-button" id="download-button">ダウンロード</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
